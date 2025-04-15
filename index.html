@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Focusly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="center-box">
+        <h1>Welcome To Focusly</h1>
+        <h2>Your #1 place to go to focus</h2>
+
+        <div class="dropdown">
+            <label for="category">Choose a category:</label>
+            <select id="category">
+                <option value="lofi">Lofi</option>
+                <option value="keenola">Kee Nola</option>
+            </select>
+        </div>
+
+        <div class="player">
+            <span class="song-name" id="songName">Select a playlist</span>
+            <div id="controls">
+                <button id="prevBtn">◀◀</button>
+                <button id="playPauseBtn">▶</button>
+                <button id="nextBtn">▶▶</button>
+            </div>
+            
+        </div>
+        <div id="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress" value="0" min="0" max="100">
+            <span id="duration">0:00</span>
+        </div>
+
+        <audio id="audioPlayer"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>

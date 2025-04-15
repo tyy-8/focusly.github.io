@@ -1,0 +1,158 @@
+body {
+    background-color: rgb(32, 32, 32);
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-shadow: 0 0 15px rgba(0, 0, 0, 50);
+}
+
+.center-box {
+    text-align: center;
+    color: rgb(109, 109, 109);
+    
+}
+
+.player {
+    margin-top: 20px;
+    background-color: #1e1e1e;
+    border-radius: 20px;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 20);
+    font-size: 18px;
+}
+
+.song-name {
+    flex-grow: 1;
+    text-align: left;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 20);
+}
+
+#controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+}
+
+button {
+    background-color: #383838;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 20);
+}
+
+button:hover {
+    background-color: #444;
+}
+
+button:focus {
+    outline: none;
+}
+
+#prevBtn, #nextBtn {
+    font-size: 15px;  /* Slightly larger icons for Next/Prev */
+}
+
+
+.dropdown {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+.dropdown label {
+    margin-bottom: 8px;
+    color: rgb(150, 150, 150);
+}
+
+.dropdown select {
+    background-color: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.dropdown select:hover {
+    border-color: #666;
+}
+
+.dropdown select:focus {
+    outline: none;
+    border-color: #888;
+}
+
+#progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    width: 80%;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(160, 160, 160);
+    font-size: 14px;
+}
+
+#progress {
+    flex: 1;
+    appearance: none;
+    height: 6px;
+    border-radius: 5px;
+    background: #555;
+    outline: none;
+    cursor: pointer;
+}
+
+#progress::-webkit-slider-thumb {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+}
+
+#progress::-moz-range-thumb {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    border: none;
+}
+
