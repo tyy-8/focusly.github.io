@@ -5,6 +5,9 @@ const categoryDropdown = document.getElementById('category');
 const progress = document.getElementById('progress');
 const currentTimeLabel = document.getElementById('current-time');
 const durationLabel = document.getElementById('duration');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
 
 let playlist = [];
 let currentTrack = 0;
@@ -27,6 +30,17 @@ document.addEventListener('mousemove', (event) => {
 
     // Apply the calculated offset to move the center-box slightly
     centerBox.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+});
+prevBtn.addEventListener('click', () => {
+    if (!playlist.length) return;
+    currentTrack = (currentTrack - 1 + playlist.length) % playlist.length;
+    playCurrentTrack();
+});
+
+nextBtn.addEventListener('click', () => {
+    if (!playlist.length) return;
+    currentTrack = (currentTrack + 1) % playlist.length;
+    playCurrentTrack();
 });
 
 
